@@ -173,7 +173,7 @@ export default function Page() {
                     <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-slate-600">
                       {e.details.map((d, i) => <li key={i}>{d}</li>)}
                     </ul>
-                  ) : null)
+                  ) : null}
                 </div>
               ))}
             </CardContent>
