@@ -19,7 +19,7 @@ const profile = {
   availability: "Open to internships & freelance",
   avatar: "/me.jpg",
   resumeUrl: "/resume.pdf",
-  social: { github: "https://github.com/yourhandle", linkedin: "https://www.linkedin.com/in/your-handle/", email: "mailto:johnxjrafael@gmail.com" },
+  social: { github: "https://github.com/21rafael-john", linkedin: "https://www.linkedin.com/in/rafael-john-38070b291/", email: "mailto:johnxjrafael@gmail.com" },
 };
 
 const skills = [
@@ -33,8 +33,8 @@ const skills = [
 const education = [
   {
     title: "B.Sc. in Computer Science (Data Analytics)",
-    org: "Your University, Kuala Lumpur",
-    period: "2023 – Present",
+    org: "Asia Pcific University, Malaysia",
+    period: "2023 – 2026",
     details: [
       "Relevant coursework: Data Mining, Database Systems, Statistics, Machine Learning",
     ],
