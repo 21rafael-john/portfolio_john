@@ -55,7 +55,14 @@ const education = [
 
 export default function Page() {
   const [open, setOpen] = React.useState<number | null>(null);
-  const featured = projects.slice(0, 3);
+  const featuredSlugs = [
+  "london-housing-analysis",
+  "velocity-cycles-bi",
+  "phishing-detection", 
+  ];
+  const featured = projects
+  .filter(p => featuredSlugs.includes(p.slug))
+  .sort((a, b) => featuredSlugs.indexOf(a.slug) - featuredSlugs.indexOf(b.slug));
 
   return (
     <div className="min-h-screen">
