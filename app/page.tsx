@@ -26,8 +26,8 @@ const skills = [
   { name: "Python", pct: 90 },
   { name: "R", pct: 85 },
   { name: "SQL", pct: 85 },
-  { name: "Power BI", pct: 80 },
-  { name: "Tableau", pct: 75 },
+  { name: "Power BI", pct: 85 },
+  { name: "C", pct: 75 },
 ];
 
 const education = [
