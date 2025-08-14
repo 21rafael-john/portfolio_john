@@ -14,7 +14,7 @@ import { projects } from "@/app/data/projects";
 const profile = {
   name: "Rafael John",
   title: "Computer Science Student · Data Analytics Specialization",
-  blurb: "Detail-oriented and motivated Computer Science student specializing in Data Analytics, seeking an internship to apply expertise in data cleaning, visualization, and statistical analysis. Skilled in Python, R, SQL, Power BI, and Tableau.",
+  blurb: "Detail-oriented and motivated Computer Science student specializing in Data Analytics, seeking an internship to apply expertise in data cleaning, visualization, and statistical analysis. Skilled in Python, R, SQL, Power BI.",
   location: "Kuala Lumpur, MY",
   availability: "Open to internships & freelance",
   avatar: "/me.jpg",
