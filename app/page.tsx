@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, ArrowUpRight, Download, ExternalLink, MapPin } from "lucide-react";
 import { projects } from "@/app/data/projects";
 
-const DonutChart = dynamic(() => import("@/components/DonutChart"), { ssr: false });
+
 
 const profile = {
   name: "Rafael John",
@@ -30,6 +30,29 @@ const skills = [
   { name: "Power BI", pct: 80 },
   { name: "Tableau", pct: 75 },
 ];
+
+const education = [
+  {
+    title: "B.Sc. in Computer Science (Data Analytics)",
+    org: "Your University, Kuala Lumpur",
+    period: "2023 – Present",
+    details: [
+      "Relevant coursework: Data Mining, Database Systems, Statistics, Machine Learning",
+    ],
+  },
+  {
+    title: "Data Analyst Intern",
+    org: "PT Miota International Teknologi",
+    period: "Jul 2025 – Nov 2025",
+    details: [
+      "Mapped and documented agricultural workflows for ERP migration",
+      "Configured ERP modules, executed UAT test cases, and logged issues",
+      "Cleaned and validated legacy datasets for accurate system integration",
+    ],
+  },
+];
+
+
 
 export default function Page() {
   const [open, setOpen] = React.useState<number | null>(null);
@@ -138,8 +161,23 @@ export default function Page() {
             </CardContent>
           </Card>
           <Card className="rounded-2xl">
-            <CardHeader><CardTitle>Time Breakdown</CardTitle></CardHeader>
-            <CardContent><DonutChart data={skills}/></CardContent>
+            <CardHeader><CardTitle>Education & Internship</CardTitle></CardHeader>
+            <CardContent className="grid gap-4">
+              {education.map((e) => (
+                <div key={e.title} className="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="font-semibold">{e.title}</div>
+                    <div className="text-xs text-slate-500 whitespace-nowrap">{e.period}</div>
+                  </div>
+                  <div className="mt-1 text-sm text-slate-600">{e.org}</div>
+                  {e.details?.length ? (
+                    <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-slate-600">
+                      {e.details.map((d, i) => <li key={i}>{d}</li>)}
+                    </ul>
+                  ) : null)
+                </div>
+              ))}
+            </CardContent>
           </Card>
         </div>
       </section>
